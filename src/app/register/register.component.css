@@ -1,0 +1,37 @@
+.password-wrap {
+  display: flex;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Set to 100% for consistency */
+  max-width: 400px; /* Your preferred max-width */
+}
+
+.form-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .register {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .register {
+    max-width: 80%;
+  }
+}

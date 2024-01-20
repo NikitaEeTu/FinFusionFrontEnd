@@ -1,0 +1,39 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Set to 100% for consistency */
+  max-width: 400px; /* Your preferred max-width */
+}
+
+.form-field {
+  width: 100%;
+  max-width: 400px;
+}
+
+.password-wrap {
+  display: flex;
+}
+
+/* Adjust for medium screens */
+@media only screen and (max-width: 1300px) {
+  .login {
+    max-width: 60%;
+  }
+}
+
+/* Adjust for smaller screens */
+@media only screen and (max-width: 600px) {
+  .login {
+    max-width: 80%;
+  }
+}

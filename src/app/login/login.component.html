@@ -1,0 +1,20 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" class="login" (submit)="login()">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Email</mat-label>
+      <input style="width: 100%" matInput formControlName="email" placeholder="Enter your email" type="email">
+      <mat-error *ngIf="loginForm.get('email')?.invalid">Please enter a valid email</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Password</mat-label>
+      <div class="password-wrap">
+        <input matInput formControlName="password" placeholder="Enter your password"
+               [type]="hide ? 'password' : 'text'">
+        <mat-icon aria-hidden="false" aria-label="Password visibility icon"
+                  [fontIcon]="hide ? 'visibility_off' : 'visibility'" (click)="hide = !hide"></mat-icon>
+      </div>
+      <mat-error *ngIf="loginForm.get('password')?.invalid">Please enter your password</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>
