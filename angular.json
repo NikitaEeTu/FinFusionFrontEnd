@@ -64,7 +64,8 @@
               "browserTarget": "FinFusionFrontEnd:build:production"
             },
             "development": {
-              "browserTarget": "FinFusionFrontEnd:build:development"
+              "browserTarget": "FinFusionFrontEnd:build:development",
+              "proxyConfig": "proxy.dev.json"
             }
           },
           "defaultConfiguration": "development"

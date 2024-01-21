@@ -1,0 +1,7 @@
+export enum AssetType {
+  CRYPTOCURRENCY = 'CRYPTOCURRENCY',
+  STOCK = 'STOCK',
+  BOND = 'BOND',
+  ETF = 'ETF',
+  FIAT_MONEY = 'FIAT_MONEY'
+}

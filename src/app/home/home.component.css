@@ -1,0 +1,26 @@
+.app-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 80%;
+}
+
+.description-img{
+  width: 50%;
+  border-radius: 2rem;
+  max-width: 600px;
+}
+
+.section-wrapper{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-text{
+  width: 40%;
+  color: black;
+}

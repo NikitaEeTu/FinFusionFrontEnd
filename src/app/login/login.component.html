@@ -1,5 +1,6 @@
+<app-header></app-header>
 <div class="login-container">
-  <form [formGroup]="loginForm" class="login" (submit)="login()">
+  <form [formGroup]="loginForm" class="login-form" (submit)="login()">
     <mat-form-field appearance="fill" class="form-field">
       <mat-label>Email</mat-label>
       <input style="width: 100%" matInput formControlName="email" placeholder="Enter your email" type="email">

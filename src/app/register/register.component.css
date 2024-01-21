@@ -11,12 +11,15 @@
 }
 
 .register {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  width: 100%; /* Set to 100% for consistency */
-  max-width: 400px; /* Your preferred max-width */
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 1rem;
 }
 
 .form-field {

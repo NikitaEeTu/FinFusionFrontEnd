@@ -8,8 +8,11 @@ export class LocalStorageService {
     localStorage.setItem('authKey', value);
   }
 
-  getData(key: string) {
-    localStorage.getItem(key);
+  getData(): string {
+    let key = localStorage.getItem('authKey');
+    if(!key) {
+      key = ""
+    }
+    return key
   }
-
 }
