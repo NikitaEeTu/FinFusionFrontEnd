@@ -38,8 +38,10 @@ export class LoginComponent {
             return throwError(error);
           })
         )
-        .subscribe(authenticationResponse =>
-          this.authService.handleSuccessfulAuthentication(authenticationResponse.token));
+        .subscribe(authenticationResponse => {
+          this.authService.handleSuccessfulAuthentication(authenticationResponse.token);
+          this.localStorageService.saveData("email", authRequest.email);
+        });
     }
   }
 }

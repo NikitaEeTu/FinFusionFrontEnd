@@ -30,23 +30,23 @@ import { NgOptimizedImage } from "@angular/common";
     HeaderComponent,
     LoginComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatIconModule,
-        RouterLink,
-        MatFormFieldModule,
-        MatInputModule,
-        MatSelectModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    RouterLink,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgOptimizedImage
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

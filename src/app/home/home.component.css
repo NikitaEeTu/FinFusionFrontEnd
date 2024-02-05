@@ -1,4 +1,4 @@
-.app-description{
+.app-description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,14 +6,14 @@
   width: 80%;
 }
 
-.description-img{
+.description-img {
   width: 50%;
   border-radius: 2rem;
   max-width: 600px;
   max-height: 600px;
 }
 
-.section-wrapper{
+.section-wrapper {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.description-text{
+.description-text {
   width: 40%;
   color: black;
 }

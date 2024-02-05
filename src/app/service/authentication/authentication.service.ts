@@ -6,6 +6,7 @@ import { AuthenticationResponse } from "../../interface/AuthenticationResponse";
 import { AuthenticationRequest } from "../../interface/AuthenticationRequest";
 import { LocalStorageService } from "../localsaving/local-storage.service";
 import { Router } from "@angular/router";
+import { TokenValidationRequest } from "../../interface/TokenValidationRequest";
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +29,12 @@ export class AuthenticationService {
     return this.http.post<AuthenticationResponse>(`${this.API_URL}/authenticate`, authenticationRequest);
   }
 
+  validateUserToken(tokenValidationRequest: TokenValidationRequest): Observable<boolean> {
+    return this.http.post<boolean>(`${this.API_URL}/validate`, tokenValidationRequest)
+  }
+
   handleSuccessfulAuthentication(token: string) {
-    this.localStorageService.saveData(token);
+    this.localStorageService.saveData('authKey', token);
     this.router.navigate(['/dashboard']);
   }
 

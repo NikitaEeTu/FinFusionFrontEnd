@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LocalStorageService {
-  saveData(value: string) {
-    localStorage.setItem('authKey', value);
+  saveData(key: string, value: string) {
+    localStorage.setItem(key, value);
   }
 
-  getData(): string {
-    let key = localStorage.getItem('authKey');
-    if(!key) {
-      key = ""
+  getData(key: string): string {
+    let jwtKey = localStorage.getItem(key);
+    if (!jwtKey) {
+      jwtKey = ""
     }
-    return key
+    return jwtKey
   }
 }

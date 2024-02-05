@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { AuthenticationService } from "../service/authentication/authentication.service";
 import { RegisterRequest } from "../interface/RegisterRequest";
+import { LocalStorageService } from "../service/localsaving/local-storage.service";
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,8 @@ import { RegisterRequest } from "../interface/RegisterRequest";
 })
 export class RegisterComponent {
   constructor(
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private localStorageService: LocalStorageService
   ) {
   }
 
@@ -33,8 +35,10 @@ export class RegisterComponent {
       }
       this.authenticationService
         .register(userData)
-        .subscribe(authenticationResponse =>
-          this.authenticationService.handleSuccessfulAuthentication(authenticationResponse.token));
+        .subscribe(authenticationResponse => {
+          this.authenticationService.handleSuccessfulAuthentication(authenticationResponse.token)
+          this.localStorageService.saveData("email", userData.email);
+        });
     }
   }
 }
